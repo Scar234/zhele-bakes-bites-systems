@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FFF8F0;
+  --color-warm-white: #FFFCF8;
+  --color-chocolate: #4B2E2B;
+  --color-chocolate-dark: #2D150F;
+  --color-chocolate-light: #5e3b37;
+  --color-caramel: #C8874A;
+  --color-caramel-hover: #b57438;
+  --color-caramel-light: #df9e62;
+  --color-peach: #F4D7C4;
+  --color-peach-light: #FDF5EE;
+  --color-peach-card: #FAF4ED;
+  --color-dark-text: #292321;
+  --color-muted-text: #776D68;
+  --color-mpesa: #00A859;
+  --color-mpesa-dark: #008f4c;
+  --font-display: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  * {
+    border-color: #EEDCCB;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #FFF8F0;
+    color: #292321;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF8F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #E5CCA8;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C8874A;
+}
+
+/* Glass & Card effects */
+.glass-panel {
+  background: rgba(255, 252, 248, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.bakery-card {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bakery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(75, 46, 43, 0.12);
+}
+
+/* Shimmer animation for skeletons */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, #f5e8dc 25%, #fff2e6 50%, #f5e8dc 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}

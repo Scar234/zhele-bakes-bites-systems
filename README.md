@@ -84,3 +84,4 @@ Open the Vite URL printed in the terminal, usually `http://localhost:5173`.
 - Keep MongoDB network access restricted and enable backups.
 - Use HTTPS in production.
 - The database seed endpoint is disabled in production.
+# zhele-bakes-bites-systems
